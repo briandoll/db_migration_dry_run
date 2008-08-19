@@ -1,0 +1,30 @@
+DbMigrationDryRun
+=================
+
+History
+=======
+Geoffrey Grosenbach (topfunky) wrote the original "dry run" for migrations:
+http://nubyonrails.com/articles/a-dry-run-for-migrations
+
+The code was included in his topfunky_power_tools bundle:
+http://topfunky.net/svn/plugins/topfunky_power_tools/
+
+I'm resurrecting this code with an aim to:
+ * Add support for Rails 2.x
+ * Ensure support for all major database adapters including Oracle
+ * Add support for column renaming, etc.
+
+
+Example
+=======
+
+rake db:migrate:dry_run [all standard db:migrate options supported]
+
+
+Status
+======
+* Tested against sqlite
+* Works for create,add,remove table/column
+* Does _not_ work for change_column (yet)
+
+Copyright (c) 2008 Brian Doll, released under the MIT license
